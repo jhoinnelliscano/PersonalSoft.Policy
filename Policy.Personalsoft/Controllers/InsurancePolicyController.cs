@@ -34,7 +34,7 @@ namespace Policy.PersonalSoft.API.Controllers
         /// Servicio para consultar poliza por número de placa o número depoliza
         /// </summary>
         /// <returns></returns>
-        //[Authorize]
+        [Authorize]
         [HttpGet]
         [Route("search")]
         public async Task<ActionResult<ServiceResponseObject<InsurancePolicy>>> GetByPolicyIdOrLicensePlate(string search)
