@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Repositories\Generic\**" />
+    <EmbeddedResource Remove="Repositories\Generic\**" />
+    <None Remove="Repositories\Generic\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Repositories\InsurancePolicyPlanRepository\InsurancePolicyPlanCommandsRepository.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MongoDB.Bson" Version="2.20.0" />
+    <PackageReference Include="MongoDB.Driver" Version="2.20.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Policy.PersonalSoft.Common\Policy.PersonalSoft.Common.csproj" />
+    <ProjectReference Include="..\Policy.PersonalSoft.EntityDomain\Policy.PersonalSoft.EntityDomain.csproj" />
+    <ProjectReference Include="..\Policy.PersonalSoft.RepositoryInterface\Policy.PersonalSoft.RepositoryInterface.csproj" />
+  </ItemGroup>
+
+</Project>
